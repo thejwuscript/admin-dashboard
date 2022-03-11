@@ -15,8 +15,10 @@ body {
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: minmax(100px, 6fr) 4fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
   padding: 10px;
+  gap: 20px;
+  align-items: center;
 }
 
 .sidebar {
@@ -33,16 +35,26 @@ body {
 
 .cat-image {
   display: inline-block;
-  width: 20px;
+  width: 35px;
   height: auto;
   background-color: #FFE4C0;
   border-radius: 50%;
   padding: 3px;
 }
 
+.big-cat-image {
+  display: inline-block;
+  width: 55px;
+  height: auto;
+  background-color:#FFE4C0;
+  border-radius: 50%;
+  padding: 7px;
+}
+
 #search {
   border-radius: 15px;
-  width: 70%;
+  height: 24px;
+  width: 90%;
   background-color: #E1E1E1;
   border: none;
 }
@@ -59,6 +71,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-right: 40px;
   gap: 20px;
+  font-weight: 700;
+}
+
+.user-info {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.greeting p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.greeting > p:first-child {
+  font-size: 12px;
+}
+
+.greeting > p:last-child {
+  font-size: 22px;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
