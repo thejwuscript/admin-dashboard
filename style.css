@@ -9,11 +9,21 @@
   --color-four: #FC5185;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar a {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 body {
   
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .header {
@@ -24,17 +34,21 @@ body {
   display: grid;
   grid-template-columns: minmax(100px, 6fr) 4fr;
   grid-template-rows: 1fr 2fr;
-  padding: 10px;
+  padding: 10px 10px 10px 25px;
   gap: 20px;
   align-items: center;
-  z-index: 5
+  z-index: 5;
 }
 
 .sidebar {
   background-color: var(--color-one);
   grid-column: 1 / 2 ;
   grid-row: 1 / 3;
-  z-index: 7
+  z-index: 7;
+  display: grid;
+  grid-template-rows: 1fr 3.5fr 7fr;
+  gap: 36px;
+  color: white;
 }
 
 .main-content {
@@ -50,16 +64,16 @@ body {
   height: auto;
   background-color: #FFE4C0;
   border-radius: 50%;
-  padding: 3px;
+  padding: 8px;
 }
 
 .big-cat-image {
   display: inline-block;
-  width: 55px;
+  width: 60px;
   height: auto;
   background-color:#FFE4C0;
   border-radius: 50%;
-  padding: 7px;
+  padding: 10px;
 }
 
 #search {
@@ -76,11 +90,11 @@ body {
   justify-content: start;
   margin-left: 20px;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
 }
 
 .mag-glass {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .top-right {
@@ -88,12 +102,13 @@ body {
   align-items: center;
   justify-content: flex-end;
   margin-right: 40px;
-  gap: 20px;
+  gap: 26px;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .top-right > .bell {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .user-info {
@@ -112,11 +127,11 @@ body {
 }
 
 .greeting > p:first-child {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .greeting > p:last-child {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .greeting {
@@ -136,7 +151,7 @@ body {
 .buttons > button {
   background-color: var(--color-one);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   width: 90px;
   height: 30px;
@@ -147,4 +162,28 @@ body {
   margin: 0;
   border-radius: 18px;
   border: none;
+}
+
+.nav,
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  gap: 28px;
+}
+
+.sidebar span {
+  margin-right: 20px;
+}
+
+.sidebar > h1 {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.sidebar > h1 > span {
+  font-size: 50px;
 }
